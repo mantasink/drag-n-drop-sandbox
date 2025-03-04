@@ -39,12 +39,12 @@ export default function App() {
         <input {...getInputProps()} />
         <div
           className={`h-80 rounded-lg flex items-center justify-center font-semibold ${
-            isDragActive ? "bg-green-500" : "bg-blue-700"
+            isDragActive ? "bg-green-600" : "bg-blue-800"
           } text-white`}
         >
           {isDragActive
             ? "Drop here"
-            : "Drag 'n' drop some files here, or click to select files"}
+            : "Drag 'n' drop some files here"}
         </div>
       </div>
 
