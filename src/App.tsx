@@ -5,7 +5,7 @@ export default function App() {
   const [files, setFiles] = useState<File[]>([]);
   const [useFsAccessApi, setUseFsAccessApi] = useState<boolean>(false);
 
-  const onDrop = useCallback((acceptedFiles) => {
+  const onDrop = useCallback((acceptedFiles: any) => {
     setFiles(acceptedFiles);
   }, []);
 
@@ -30,7 +30,7 @@ export default function App() {
             checked={useFsAccessApi}
             onChange={handleCheckboxChange}
             className="mr-2"
-          />
+          />{" "}
           Use File System Access API
         </label>
       </div>
