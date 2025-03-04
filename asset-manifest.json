@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/drag-n-drop-sandbox/static/js/main.1db0545f.js",
+    "main.js": "/drag-n-drop-sandbox/static/js/main.60f7ab74.js",
     "index.html": "/drag-n-drop-sandbox/index.html",
-    "main.1db0545f.js.map": "/drag-n-drop-sandbox/static/js/main.1db0545f.js.map"
+    "main.60f7ab74.js.map": "/drag-n-drop-sandbox/static/js/main.60f7ab74.js.map"
   },
   "entrypoints": [
-    "static/js/main.1db0545f.js"
+    "static/js/main.60f7ab74.js"
   ]
 }
