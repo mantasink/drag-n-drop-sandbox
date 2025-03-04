@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
+import Toggle from "./Toggle";
 
 export default function App() {
   const [files, setFiles] = useState<File[]>([]);
@@ -24,15 +25,11 @@ export default function App() {
       <h1 className="text-3xl font-bold mb-1">Testing Drag'n'drop</h1>
 
       <div className="mt-5">
-        <label className="flex items-center">
-          <input
-            type="checkbox"
-            checked={useFsAccessApi}
-            onChange={handleCheckboxChange}
-            className="mr-2"
-          />{" "}
-          Use File System Access API
-        </label>
+        <Toggle
+          checked={useFsAccessApi}
+          onChange={handleCheckboxChange}
+          label="Use File System Access API"
+        />
       </div>
 
       <div {...getRootProps()}>
@@ -42,14 +39,13 @@ export default function App() {
             isDragActive ? "bg-green-600" : "bg-blue-800"
           } text-white`}
         >
-          {isDragActive
-            ? "Drop here"
-            : "Drag 'n' drop some files here"}
+          {isDragActive ? "Drop here" : "Drag 'n' drop some files here"}
         </div>
       </div>
 
       <div className="mt-5">
-        <h2 className="text-xl font-bold">Selected files:</h2>
+        <h2 className="text-xl font-bold">Selected Files</h2>
+        {files.length === 0 && <div>(none)</div>}
         <ul>
           {files.map((file) => (
             <li key={file.name} className="font-light">
